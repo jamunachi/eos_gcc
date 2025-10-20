@@ -1,0 +1,72 @@
+{
+  "doctype": "DocType",
+  "name": "EOS Policy Assignment",
+  "module": "EOS GCC",
+  "custom": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "is_submittable": 0,
+  "track_changes": 1,
+  "fields": [
+    {
+      "fieldname": "policy",
+      "fieldtype": "Link",
+      "label": "Policy",
+      "options": "EOS Policy",
+      "reqd": 1
+    },
+    {
+      "fieldname": "company",
+      "fieldtype": "Link",
+      "label": "Company",
+      "options": "Company"
+    },
+    {
+      "fieldname": "target_type",
+      "fieldtype": "Select",
+      "label": "Target Type",
+      "options": "Employee\nCost Center\nDepartment\nBranch\nLocation\nCompany\nCountry",
+      "reqd": 1
+    },
+    {
+      "fieldname": "target_name",
+      "fieldtype": "Dynamic Link",
+      "label": "Target Name",
+      "options": "target_type"
+    },
+    {
+      "fieldname": "effective_from",
+      "fieldtype": "Date",
+      "label": "Effective From",
+      "reqd": 1
+    },
+    {
+      "fieldname": "effective_to",
+      "fieldtype": "Date",
+      "label": "Effective To"
+    },
+    {
+      "fieldname": "priority_override",
+      "fieldtype": "Int",
+      "label": "Priority Override"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Notes"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1,
+      "cancel": 1,
+      "print": 1,
+      "email": 1
+    }
+  ]
+}

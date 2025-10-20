@@ -1,0 +1,62 @@
+{
+  "doctype": "DocType",
+  "name": "EOS Settings",
+  "module": "EOS GCC",
+  "custom": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "is_submittable": 0,
+  "track_changes": 1,
+  "fields": [
+    {
+      "fieldname": "priority_json",
+      "fieldtype": "Data",
+      "label": "Priority Order JSON",
+      "default": "'[\"Employee\",\"Cost Center\",\"Department\",\"Branch\",\"Location\",\"Company\",\"Country\"]'"
+    },
+    {
+      "fieldname": "default_country",
+      "fieldtype": "Select",
+      "label": "Default Country",
+      "options": "Saudi Arabia\nUnited Arab Emirates\nQatar\nOman\nKuwait\nBahrain"
+    },
+    {
+      "fieldname": "lock_on_calc",
+      "fieldtype": "Check",
+      "label": "Lock Resolved Policy on Calculation",
+      "default": 1
+    },
+    {
+      "fieldname": "expense_account",
+      "fieldtype": "Link",
+      "label": "Default Expense Account",
+      "options": "Account"
+    },
+    {
+      "fieldname": "provision_account",
+      "fieldtype": "Link",
+      "label": "Default Provision Account",
+      "options": "Account"
+    },
+    {
+      "fieldname": "payable_account",
+      "fieldtype": "Link",
+      "label": "Default Payable Account",
+      "options": "Account"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1,
+      "cancel": 1,
+      "print": 1,
+      "email": 1
+    }
+  ],
+  "issingle": 1
+}

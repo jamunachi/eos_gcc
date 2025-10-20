@@ -1,0 +1,6 @@
+
+include MANIFEST.in
+include requirements.txt
+include README.md
+recursive-include eos_gcc *.py
+recursive-include eos_gcc *.json

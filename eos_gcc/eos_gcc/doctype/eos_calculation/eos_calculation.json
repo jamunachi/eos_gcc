@@ -1,0 +1,127 @@
+{
+  "doctype": "DocType",
+  "name": "EOS Calculation",
+  "module": "EOS GCC",
+  "custom": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "is_submittable": 0,
+  "track_changes": 1,
+  "fields": [
+    {
+      "fieldname": "employee",
+      "fieldtype": "Link",
+      "label": "Employee",
+      "options": "Employee",
+      "reqd": 1
+    },
+    {
+      "fieldname": "company",
+      "fieldtype": "Link",
+      "label": "Company",
+      "options": "Company",
+      "reqd": 1
+    },
+    {
+      "fieldname": "country",
+      "fieldtype": "Data",
+      "label": "Country",
+      "read_only": 1
+    },
+    {
+      "fieldname": "separation_type",
+      "fieldtype": "Select",
+      "label": "Separation Type",
+      "options": "Termination\nResignation\nOther",
+      "reqd": 1
+    },
+    {
+      "fieldname": "join_date",
+      "fieldtype": "Date",
+      "label": "Date of Joining",
+      "reqd": 1
+    },
+    {
+      "fieldname": "last_working_date",
+      "fieldtype": "Date",
+      "label": "Last Working Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "last_wage",
+      "fieldtype": "Currency",
+      "label": "Last Wage",
+      "reqd": 1
+    },
+    {
+      "fieldname": "resolved_policy",
+      "fieldtype": "Link",
+      "label": "Resolved Policy",
+      "options": "EOS Policy",
+      "read_only": 1
+    },
+    {
+      "fieldname": "resolution_source",
+      "fieldtype": "Link",
+      "label": "Resolution Source",
+      "options": "EOS Policy Assignment",
+      "read_only": 1
+    },
+    {
+      "fieldname": "resolution_explain",
+      "fieldtype": "Data",
+      "label": "Resolution Explain",
+      "read_only": 1
+    },
+    {
+      "fieldname": "computed_years",
+      "fieldtype": "Float",
+      "label": "Service (Years)",
+      "read_only": 1
+    },
+    {
+      "fieldname": "breakdown_json",
+      "fieldtype": "Long Text",
+      "label": "Breakdown JSON",
+      "read_only": 1
+    },
+    {
+      "fieldname": "gross_eos",
+      "fieldtype": "Currency",
+      "label": "Gross EOS",
+      "read_only": 1
+    },
+    {
+      "fieldname": "provisions_to_reverse",
+      "fieldtype": "Currency",
+      "label": "Provisions to Reverse"
+    },
+    {
+      "fieldname": "net_payable",
+      "fieldtype": "Currency",
+      "label": "Net Payable",
+      "read_only": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Draft\nCalculated\nPosted",
+      "default": "Draft",
+      "read_only": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1,
+      "cancel": 1,
+      "print": 1,
+      "email": 1
+    }
+  ]
+}

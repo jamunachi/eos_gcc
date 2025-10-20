@@ -1,0 +1,79 @@
+{
+  "doctype": "DocType",
+  "name": "EOS Policy",
+  "module": "EOS GCC",
+  "custom": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "is_submittable": 0,
+  "track_changes": 1,
+  "fields": [
+    {
+      "fieldname": "country",
+      "fieldtype": "Select",
+      "label": "Country",
+      "options": "Saudi Arabia\nUnited Arab Emirates\nQatar\nOman\nKuwait\nBahrain",
+      "reqd": 1
+    },
+    {
+      "fieldname": "policy_code",
+      "fieldtype": "Data",
+      "label": "Policy Code",
+      "reqd": 1
+    },
+    {
+      "fieldname": "effective_from",
+      "fieldtype": "Date",
+      "label": "Effective From",
+      "reqd": 1
+    },
+    {
+      "fieldname": "effective_to",
+      "fieldtype": "Date",
+      "label": "Effective To"
+    },
+    {
+      "fieldname": "wage_basis",
+      "fieldtype": "Select",
+      "label": "Wage Basis",
+      "options": "Basic\nBasic+Fixed Allowances\nLast Wage\nCustom",
+      "default": "Basic"
+    },
+    {
+      "fieldname": "exclude_unpaid",
+      "fieldtype": "Check",
+      "label": "Exclude Unpaid Leave Days"
+    },
+    {
+      "fieldname": "mode",
+      "fieldtype": "Select",
+      "label": "Mode",
+      "options": "Slab\nSIO_BAHRAIN",
+      "default": "Slab"
+    },
+    {
+      "fieldname": "max_cap_months",
+      "fieldtype": "Float",
+      "label": "Max Total Cap (Months)"
+    },
+    {
+      "fieldname": "rules",
+      "fieldtype": "Table",
+      "label": "Rules",
+      "options": "EOS Rule"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1,
+      "cancel": 1,
+      "print": 1,
+      "email": 1
+    }
+  ]
+}

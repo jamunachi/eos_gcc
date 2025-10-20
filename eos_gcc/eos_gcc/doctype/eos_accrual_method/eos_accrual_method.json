@@ -1,0 +1,68 @@
+{
+  "doctype": "DocType",
+  "name": "EOS Accrual Method",
+  "module": "EOS GCC",
+  "custom": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "is_submittable": 0,
+  "track_changes": 1,
+  "fields": [
+    {
+      "fieldname": "company",
+      "fieldtype": "Link",
+      "label": "Company",
+      "options": "Company",
+      "reqd": 1
+    },
+    {
+      "fieldname": "method",
+      "fieldtype": "Select",
+      "label": "Accrual Method",
+      "options": "Straight-line\nPer-slab",
+      "default": "Per-slab",
+      "reqd": 1
+    },
+    {
+      "fieldname": "post_frequency",
+      "fieldtype": "Select",
+      "label": "Post Frequency",
+      "options": "Monthly",
+      "default": "Monthly"
+    },
+    {
+      "fieldname": "expense_account",
+      "fieldtype": "Link",
+      "label": "Expense Account",
+      "options": "Account",
+      "reqd": 1
+    },
+    {
+      "fieldname": "provision_account",
+      "fieldtype": "Link",
+      "label": "Provision Account",
+      "options": "Account",
+      "reqd": 1
+    },
+    {
+      "fieldname": "payable_account",
+      "fieldtype": "Link",
+      "label": "Payable Account",
+      "options": "Account",
+      "reqd": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1,
+      "cancel": 1,
+      "print": 1,
+      "email": 1
+    }
+  ]
+}

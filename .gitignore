@@ -1,0 +1,22 @@
+﻿# Python / Frappe
+__pycache__/
+*.pyc
+.env
+venv/
+env/
+node_modules/
+*.log
+*.sqlite*
+*.db
+*.swp
+.DS_Store
+
+# Bench build artifacts (if any sneak in)
+assets/
+*.min.js
+*.min.css
+
+# OS/IDE
+Thumbs.db
+.idea/
+.vscode/
